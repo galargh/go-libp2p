@@ -8,4 +8,4 @@ on:
 
 jobs:
   releaser:
-    uses: protocol/.github/.github/workflows/releaser.yml@explicit-tag
+    uses: protocol/.github/.github/workflows/releaser.yml@gh-release-target
