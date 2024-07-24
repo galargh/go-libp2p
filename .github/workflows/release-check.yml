@@ -22,6 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
-      - run: ls -a
+      - run: ls -la
+        shell: bash
+      - run: ls -la *
         shell: bash
     
