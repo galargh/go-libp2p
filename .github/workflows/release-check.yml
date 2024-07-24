@@ -16,4 +16,12 @@ concurrency:
 
 jobs:
   release-check:
-    uses: ipdxco/unified-github-workflows/.github/workflows/release-check.yml@rust
+    uses: ipdxco/unified-github-workflows/.github/workflows/release-check.yml@release-check-artifacts
+  release-check-followup:
+    needs: [release-check]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+      - run: ls -a
+        shell: bash
+    
