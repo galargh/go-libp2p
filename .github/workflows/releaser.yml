@@ -19,5 +19,5 @@ jobs:
     needs: [releaser]
     runs-on: ubuntu-latest
     steps:
-      - run: echo '${{ jobs.releaser.outputs.json }}'
+      - run: echo '${{ needs.releaser.outputs.json }}'
         shell: bash
