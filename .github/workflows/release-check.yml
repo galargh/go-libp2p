@@ -21,6 +21,6 @@ jobs:
     needs: [release-check]
     runs-on: ubuntu-latest
     steps:
-      - run: echo '${{ needs.release-check.outputs.json }}'
+      - run: jq . <<< '${{ needs.release-check.outputs.json }}'
         shell: bash
     
