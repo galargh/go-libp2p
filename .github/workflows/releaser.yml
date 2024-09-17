@@ -19,5 +19,7 @@ jobs:
     needs: [releaser]
     runs-on: ubuntu-latest
     steps:
+      - run: echo '${{ needs.releaser.outputs.json }}'
+        shell: bash
       - run: jq . <<< '${{ fromJSON(needs.releaser.outputs.json) }}'
         shell: bash
