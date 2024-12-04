@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   go-check:
-    uses: ipdxco/unified-github-workflows/.github/workflows/go-check.yml@main
+    uses: ipdxco/unified-github-workflows/.github/workflows/go-check.yml@ip-november
     with:
       go-version: this
       go-generate-ignore-protoc-version-comments: true
